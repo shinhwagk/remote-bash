@@ -7,11 +7,10 @@ if [ -z "$REMOTE_BASH_URL" ]; then
 fi
 
 if [ -z "$COMMAND_NAME" ]; then
-  echo "\$COMMAND_NAME" not found
-  exit 1
+  COMMAND=${COMMAND_NAME-${REMOTE_BASH_URL##*/}}
 fi
 
-curl -o /usr/local/bin/$COMMAND_NAME $REMOTE_BASH_URL
+curl -o /usr/local/bin/$COMMAND $REMOTE_BASH_URL
 
-chmod +x /usr/local/bin/$COMMAND_NAME
-/usr/local/bin/$COMMAND_NAME $@
+chmod +x /usr/local/bin/$COMMAND
+/usr/local/bin/$COMMAND $@
