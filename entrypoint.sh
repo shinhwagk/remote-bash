@@ -14,4 +14,4 @@ fi
 curl -o /usr/local/bin/$COMMAND_NAME $REMOTE_BASH_URL
 
 chmod +x /usr/local/bin/$COMMAND_NAME
-/usr/local/bin/$COMMAND_NAME
+/usr/local/bin/$COMMAND_NAME $@
