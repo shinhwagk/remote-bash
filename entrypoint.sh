@@ -7,10 +7,10 @@ if [ -z "$REMOTE_BASH_URL" ]; then
 fi
 
 if [ -z "$COMMAND_NAME" ]; then
-  COMMAND=${COMMAND_NAME-${REMOTE_BASH_URL##*/}}
+  COMMAND=${COMMAND_NAME:-${REMOTE_BASH_URL##*/}}
 fi
 
 curl -o /usr/local/bin/$COMMAND $REMOTE_BASH_URL
-
 chmod +x /usr/local/bin/$COMMAND
+
 /usr/local/bin/$COMMAND $@
