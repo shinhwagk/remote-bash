@@ -13,6 +13,7 @@ RUN set -e -x; \
             git \
             openssh-client \
         ;
+ RUN curl -o /usr/bin/$COMMAND_NAME $REMOTE_BASH_URL;
 
 COPY entrypoint /entrypoint.sh
 
