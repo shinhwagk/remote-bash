@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
-LABEL "com.github.actions.name"="git-bash"
-LABEL "com.github.actions.description"="Run a command or script in a Git-ready environment"
+LABEL "com.github.actions.name"="remote-bash"
+LABEL "com.github.actions.description"="Run remote shell script "
 LABEL "com.github.actions.icon"="hash"
 LABEL "com.github.actions.color"="black"
 
