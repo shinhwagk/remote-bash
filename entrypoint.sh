@@ -1,3 +1,6 @@
 #!/bin/sh
+set -e
 
-$COMMAND_NAME $@
+curl -o /usr/local/bin/$COMMAND_NAME $REMOTE_BASH_URL
+
+/usr/local/bin/$COMMAND_NAME
